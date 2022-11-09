@@ -1,27 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 
+
+
+@IonicPage()
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html'
+  selector: 'page-inforusuario',
+  templateUrl: 'inforusuario.html',
 })
-export class ListPage {
-  
-  usuarios = [];
+export class InforusuarioPage {
+
+  enderecos = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public usuarioProvider: UsuarioProvider
     ) {
 
-      this.usuarioProvider.ListarUsuarios().subscribe(_data => {
+      this.usuarioProvider.ListarEnderecos().subscribe(_data => {
         console.log(_data);
 
-        this.usuarios = _data;
+        this.enderecos = _data;
 
       });
 
   }
-  
-
 }

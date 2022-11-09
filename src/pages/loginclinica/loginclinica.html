@@ -1,0 +1,35 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Faça login ou Cadastre-se </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+  <ion-list>
+    <ion-item no-lines>
+      <ion-avatar class="center">
+        <img class="center" src="https://nossaclinicamedica.com.br/assets/img/historia.jpg">
+      </ion-avatar>
+    </ion-item>  
+  
+    <ion-item>
+      <ion-label stacked>E-mail</ion-label>
+      <ion-input type="text" ({ngModel})="Email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label stacked>Senha</ion-label>
+      <ion-input type="password" ({ngModel})="senha"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button block (click)="entrar()">Entrar</button>
+
+  <button ion-button block (click)="showConfirm()">Cadastra-se</button>
+
+  <button ion-button block (click)="redirecionaresquecisenha()">Esqueci senha</button>
+
+  
+</ion-content>

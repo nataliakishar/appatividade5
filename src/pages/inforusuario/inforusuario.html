@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Endereços</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let iten of enderecos ">
+      <ion-avatar item-start>
+        
+      </ion-avatar>
+      <h2>{{iten.localidade}}</h2>
+      <p>{{iten.cep}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
